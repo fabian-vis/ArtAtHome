@@ -1,0 +1,238 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Copperplate", Times, serif;
+}
+main {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,179,1) 63%);
+    height: 264px;
+    width: 453px;
+}
+.scene p{
+    font-size: 15px;
+}
+.scene h2 {
+    margin-top: 2em;
+    font-size: 20px;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+article:first-of-type {
+    flex: 0 0 65%;
+    padding: 1em;
+}
+
+article:first-of-type ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+}
+
+article:first-of-type h1{
+    font-size: 25px;
+    margin: 0;
+}
+
+
+article:nth-of-type(2) {
+    flex: 1;
+    padding: 0.5em;
+    margin-top: 20px;
+}
+
+article:nth-of-type(2) img{
+    display: flex;
+    width: 75%;
+    height: auto;
+    border-radius: 75%;
+    margin: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+footer img {
+    width: 45px;
+    height: auto;
+    margin: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flip-card {
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    transform: rotateY(180deg);
+  }
+
+/* bounce */
+  @keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+span {  
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  color: white;
+}
+span:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+/* wat proberen */
+.scene {
+  display: inline-block;
+  width: 453px;
+  height: 264px;
+/*   border: 1px solid #CCC; */
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-weight: bold;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,179,1) 63%);
+  filter: drop-shadow(0 0 1rem crimson);
+}
+
+.card__face--back {
+  background: linear-gradient(90deg, rgba(43,43,179,1) 0%, slateblue  63%);
+  transform: rotateY(180deg);
+  padding: 10px;
+  filter: drop-shadow(0 0 1rem crimson);
+}
+
+.card__face--back img {
+  width: 35px;
+  height: auto;
+  margin: 0 10px;
+}
+.card__face--back h1 {
+  margin: 10px 0 10px 10px;
+}
+
+.card__face--back ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+}
+
+.card__face--back li {
+    text-align: center; 
+    vertical-align: middle;
+    line-height: 35px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+/* Mobiel */
+
+@media only screen and (max-width: 900px) {
+
+  .scene {
+    display: inline-block;
+    width: 80%;
+    height: 264px;
+  /*   border: 1px solid #CCC; */
+    margin: 40px 0;
+    perspective: 600px;
+  }
+
+article:nth-of-type(2) img{
+  width: 50%;
+}
+
+}
