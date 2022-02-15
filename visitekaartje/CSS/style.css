@@ -6,12 +6,6 @@ body {
     color: white;
     font-family: "Copperplate", Times, serif;
 }
-main {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,179,1) 63%);
-    height: 264px;
-    width: 453px;
-}
 .scene p{
     font-size: 15px;
 }
@@ -19,12 +13,13 @@ main {
     margin-top: 2em;
     font-size: 20px;
 }
+/* Binnenste van de kaartjes */
 section {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
 }
-
+/* kaartje 1 */
 article:first-of-type {
     flex: 0 0 65%;
     padding: 1em;
@@ -41,7 +36,7 @@ article:first-of-type h1{
     margin: 0;
 }
 
-
+/* kaartje 2 */
 article:nth-of-type(2) {
     flex: 1;
     padding: 0.5em;
@@ -56,6 +51,7 @@ article:nth-of-type(2) img{
     margin: auto;
 }
 
+/* footer styling */
 footer {
     display: flex;
     flex-direction: row;
@@ -76,10 +72,10 @@ footer a {
     margin: 0;
 }
 
+/* bron: https://3dtransforms.desandro.com/card-flip */
 .flip-card {
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
-  
   /* This container is needed to position the front and back side */
   .flip-card-inner {
     position: relative;
@@ -114,51 +110,16 @@ footer a {
     transform: rotateY(180deg);
   }
 
-/* bounce */
-  @keyframes bounce {
-	0%, 100%, 20%, 50%, 80% {
-		-webkit-transform: translateY(0);
-		-ms-transform:     translateY(0);
-		transform:         translateY(0)
-	}
-	40% {
-		-webkit-transform: translateY(-30px);
-		-ms-transform:     translateY(-30px);
-		transform:         translateY(-30px)
-	}
-	60% {
-		-webkit-transform: translateY(-15px);
-		-ms-transform:     translateY(-15px);
-		transform:         translateY(-15px)
-	}
-}
-span {  
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  color: white;
-}
-span:hover {
-  cursor: pointer;
-  animation-name: bounce;
-  -moz-animation-name: bounce;
-}
-
-/* wat proberen */
+/* Flip van de kaartjes */
+/* container */
 .scene {
   display: inline-block;
   width: 453px;
   height: 264px;
-/*   border: 1px solid #CCC; */
   margin: 40px 0;
   perspective: 600px;
 }
-
+/* individuele kaart */
 .card {
   position: relative;
   width: 100%;
@@ -168,10 +129,11 @@ span:hover {
   transform-origin: center right;
   transition: transform 1s;
 }
-
+/* animatie */
 .card.is-flipped {
   transform: translateX(-100%) rotateY(-180deg);
 }
+
 
 .card__face {
   position: absolute;
@@ -182,11 +144,12 @@ span:hover {
   backface-visibility: hidden;
 }
 
+/* styling voorkant */
 .card__face--front {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,179,1) 63%);
   filter: drop-shadow(0 0 1rem crimson);
 }
-
+/* styling achterkant */
 .card__face--back {
   background: linear-gradient(90deg, rgba(43,43,179,1) 0%, slateblue  63%);
   transform: rotateY(180deg);
