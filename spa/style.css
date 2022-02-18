@@ -17,24 +17,27 @@ body {
     padding: 0;
     margin: 0;
 }
-
 header {
     display: flex;
     margin: 0 auto;
-    height: 50vh;
+    height: 100vh;
     background-image: url("img/Rijks.jpeg");
     background-size: cover;
     background-position: bottom; 
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    text-align: center;
 }
 
-header h1 {
+body > div > h1{
    position: absolute;
-   bottom: 5vh;
-   right: 10vw;
+   top: 10vh;
    font-family: Copperplate;
    margin: 0;
    font-size: 3em;
+   left: 50%;
+    transform: translate(-50%, 0);
    background: linear-gradient(
     var(--angle),
     var(--color-1) 19%,
@@ -58,6 +61,7 @@ header h1 {
   -webkit-background-clip: text;
   color: transparent; 
   animation: 10s rotate linear infinite;
+  opacity: 1;
 }
 
 @keyframes rotate {
@@ -78,9 +82,11 @@ main > section {
     position: relative;
     width: 75%;
     margin: auto;
-    margin-top: 5vh;
     max-width: 500px;
+    margin-top: 100vh;
 }
+
+
 
 .search-icon {
     position: absolute;
@@ -115,6 +121,8 @@ main > section {
       margin: auto;
       justify-content: flex-start;
       max-width: 500px;
+      height: 30vh;
+      margin-top: 1em;
   }
 
   main > section:nth-of-type(2) > article {
@@ -133,6 +141,47 @@ main > section {
       box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
       transition: all .2s ease-in-out;
 }
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.vliegen {
+  animation: invliegen 1s ease-in forwards;
+}
+
+.headerOpacity {
+  animation: headerOpacity 2s ease-in forwards;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+@keyframes invliegen {
+  0% {
+    margin-top: 100vh;
+  }
+
+  100% {
+    margin-top: 30vh;
+  }
+}
+
+@keyframes headerOpacity {
+  0% {
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
 main > section:nth-of-type(2) > article p {
     position: absolute;
     top: 1vh;
@@ -143,4 +192,12 @@ main > section:nth-of-type(2) > article p {
 main > section:nth-of-type(2) > article img:hover {
     transform: scale(1.05);
     z-index: 1;
+}
+
+@media only screen and (max-width: 900px) {
+
+  main > section:nth-of-type(2) > article p {
+  
+    font-size: 1em;
+}
 }
