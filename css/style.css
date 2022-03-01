@@ -75,7 +75,7 @@ body > div > h1{
   inherits: false;
 }
 
-main > section {
+main > section:not(:last-child) {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -114,7 +114,7 @@ main > section {
     background-color:white ;
   }
 
-  #test {
+  main section:nth-of-type(2) {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -129,18 +129,54 @@ main > section {
       position: relative;
       width: 80%;
       margin: 3em 1em;
+      
+  }
+
+  main > section:nth-of-type(2) > article h1 {
+    position: absolute;
+    top: 10vh;
+    left: 1vw;
+    font-family: Copperplate;
+    font-size: 2em;
+    text-align: center;
+    background: linear-gradient(
+    var(--angle),
+    var(--color-1) 19%,
+    transparent 19%,
+    transparent 20%,
+    var(--color-2) 20%,
+    var(--color-2) 39%,
+    transparent 39%,
+    transparent 40%,
+    var(--color-3) 40%,
+    var(--color-3) 59%,
+    transparent 59%,
+    transparent 60%,
+    var(--color-4) 60%,
+    var(--color-4) 79%,
+    transparent 79%,
+    transparent 80%,
+    var(--color-5) 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; 
+  animation: 10s rotate linear infinite;
+  opacity: 1;
   }
 
   main > section:nth-of-type(2) > article:first-of-type {
     margin-top: 4em;
+
 }
 
   main > section:nth-of-type(2) > article img {
       width: 100%;
       height: auto;
-      box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+      box-shadow: blue 0px 0px 0px 2px inset, rgb(0, 0, 0) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(0, 0, 0) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(0, 0, 0) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(0, 0, 0) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
       transition: all .2s ease-in-out;
 }
+
 
 .skeleton {
   animation: skeleton-loading 1s linear infinite alternate;
@@ -190,6 +226,7 @@ main > section:nth-of-type(2) > article p {
     font-family: Copperplate;
     font-size: 1.4em;
     background-color: rgb(0,0,0, 0.7);
+    color: white;
 }
 main > section:nth-of-type(2) > article img:hover {
     transform: scale(1.05);

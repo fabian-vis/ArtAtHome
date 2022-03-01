@@ -1,5 +1,5 @@
 import {
-    getAndRenderData
+    getData
 } from './api.js'
 
 import {
@@ -14,7 +14,7 @@ export function search(searchBar) {
     let url =
         "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=" + searchTerm + "&ps=5";
     console.log(url);
-    getAndRenderData(url);
+    getData(url);
 }
 
 
@@ -31,7 +31,7 @@ searchIcon.addEventListener("click", () => {
     let url =
         "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=&ps=5";
     searchIcon.style.visibility = "hidden";
-    getAndRenderData(url);
+    getData(url);
 })
 
 searchBar.addEventListener("keyup", function (e) {

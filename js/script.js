@@ -4,7 +4,7 @@ import {
 } from './modules/var.js'
 
 import {
-    getAndRenderData
+    getData
 } from './modules/api.js'
 
 function showLoading() {
@@ -18,4 +18,4 @@ function showLoading() {
 }
 
 showLoading()
-getAndRenderData(url)
+getData(url)

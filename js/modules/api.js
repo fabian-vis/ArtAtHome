@@ -22,7 +22,7 @@ function headerOpacity() {
     headerSection.classList.add("headerOpacity");
 }
 
-export function getAndRenderData(url) {
+export function getData(url) {
     const data = fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -30,7 +30,16 @@ export function getAndRenderData(url) {
             searchError(data)
             renderData(data)
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            flyIn()
+            testSection.insertAdjacentHTML('afterbegin',
+                `
+            <article>
+                <p>Oeps, er is iets fout gegaan.</p> 
+                <h1>Herlaad de pagina om het opnieuw te proberen</h1>
+            </article>
+        `)
+        })
 }
 
 function renderData(data) {
@@ -43,7 +52,7 @@ function renderData(data) {
             `
             <article>
                 <p>${kunst.title}</p> 
-                <img class="skeleton" src="${kunst.webImage.url.slice(0, -3)+"=s1000"}">
+                <img src="${kunst.webImage.url.slice(0, -3)+"=s1000"}">
             </article>
         `)
     })
