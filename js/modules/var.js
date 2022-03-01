@@ -1,0 +1,15 @@
+export const testSection = document.querySelector('#test');
+export const flySection = document.querySelector('main > section');
+export const headerSection = document.querySelector('header');
+export let url = 'https://www.rijksmuseum.nl/api/nl/collection?key=8op6V3T9&involvedMaker=Rembrandt+van+Rijn'
+
+export const searchIcon = document.querySelector(".kruisje");
+export const searchBar = document.querySelector("main > section > input");
+export const artistsForError = [
+    "Rembrandt",
+    "Vermeer",
+    "Hals",
+    "Cuyp",
+    "Asselijn",
+    "Hitler",
+];
