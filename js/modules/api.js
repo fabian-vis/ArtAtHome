@@ -1,25 +1,23 @@
 import {
-    htmlSection,
-    flySection,
-    headerSection
+    htmlSection
 } from './var.js'
 
 import {
-    searchError
+    errorState,
+    header,
+    flyIn
+} from './states.js'
+
+import {
+    searchError,
 } from './searchError.js'
 
 import './search.js'
+
+
 /* ------------------------------------------------loading state verwijderen */
 function hideLoading() {
     htmlSection.classList.remove("skeleton");
-}
-/* ------------------------------------------------data in laten vliegen */
-function flyIn() {
-    flySection.classList.add("vliegen");
-}
-/* ------------------------------------------------Header opacity veranderen */
-function header() {
-    headerSection.classList.add("headerOpacity");
 }
 
 /* ------------------------------------------------Data uit de API halen */
@@ -34,13 +32,7 @@ export function getData(url) {
         /* ------------------------------------------------Gebruiker word op de hoogte gesteld van een error */
         .catch(err => {
             flyIn()
-            htmlSection.insertAdjacentHTML('afterbegin',
-                `
-            <article>
-                <p>Oeps, er is iets fout gegaan.</p> 
-                <h1>Herlaad de pagina om het opnieuw te proberen</h1>
-            </article>
-        `)
+            errorState()
         })
 }
 /* ------------------------------------------------Data word op de pagina gerenderd */

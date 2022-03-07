@@ -33,8 +33,8 @@ Ik heb gebruik gemaakt van de Rijksmuseum API. Deze API is gratis te gebruiken e
 | Search function              | ✅    |
 | Loading state                | ✅    |
 | Error state                  | ✅    |
-| Hash routing                 |       |
-| Detail Page                  |       |
+| Hash routing                 | ✅    |
+| Detail Page (?)              |       |
 
 ### Licence
 
