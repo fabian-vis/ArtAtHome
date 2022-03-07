@@ -4,7 +4,7 @@ import {
     testSection
 } from './var.js'
 
-
+/* ------------------------------------------------search error function */
 export function searchError(data) {
     let searchTerm = searchBar.value;
     if (data.artObjects.length === 0) {

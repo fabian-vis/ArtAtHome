@@ -1,3 +1,4 @@
+/* ------------------------------------------------alle variable handig op 1 plek */
 export const testSection = document.querySelector('main > section:nth-of-type(2)');
 export const flySection = document.querySelector('main > section');
 export const headerSection = document.querySelector('header');

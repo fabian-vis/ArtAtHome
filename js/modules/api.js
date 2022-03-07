@@ -9,19 +9,19 @@ import {
 } from './searchError.js'
 
 import './search.js'
-
+/* ------------------------------------------------loading state verwijderen */
 function hideLoading() {
     testSection.classList.remove("skeleton");
 }
-
+/* ------------------------------------------------data in laten vliegen */
 function flyIn() {
     flySection.classList.add("vliegen");
 }
-
-function headerOpacity() {
+/* ------------------------------------------------Header opacity veranderen */
+function header() {
     headerSection.classList.add("headerOpacity");
 }
-
+/* ------------------------------------------------Data uit de API halen */
 export function getData(url) {
     const data = fetch(url)
         .then(response => response.json())
@@ -30,6 +30,7 @@ export function getData(url) {
             searchError(data)
             renderData(data)
         })
+        /* ------------------------------------------------Gebruiker word op de hoogte gesteld van een error */
         .catch(err => {
             flyIn()
             testSection.insertAdjacentHTML('afterbegin',
@@ -41,11 +42,11 @@ export function getData(url) {
         `)
         })
 }
-
+/* ------------------------------------------------Data word op de pagina gerenderd */
 function renderData(data) {
     hideLoading()
     flyIn()
-    headerOpacity()
+    header()
     console.log(data)
     data.artObjects.forEach(kunst => {
         testSection.insertAdjacentHTML('afterbegin',

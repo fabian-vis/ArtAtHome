@@ -7,6 +7,8 @@ import {
     getData
 } from './modules/api.js'
 
+
+/* ------------------------------------------------loading state */
 function showLoading() {
     testSection.classList.add("skeleton");
     /* after awhile the loading will cancel */
@@ -16,6 +18,7 @@ function showLoading() {
 
     }, 5000);
 }
-
+/* ------------------------------------------------loading state aanzetten */
 showLoading()
+/* ------------------------------------------------API data fetchen */
 getData(url)
