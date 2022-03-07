@@ -123,6 +123,7 @@ main > section:not(:last-child) {
       max-width: 500px;
       height: 30vh;
       margin-top: 1em;
+      position: relative;
   }
 
   main > section:nth-of-type(2) > article {

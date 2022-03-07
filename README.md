@@ -9,6 +9,11 @@ Welkom bij mijn project van de minor Webdesign and development. Het doel van dit
 ### Resultaat
 
 Hier kan je de pagina bekijken [ArtAtHome](https://fabian-vis.github.io/ArtAtHome/ "ArtAtHome")
+![Voorbeeld Website](img/voorbeeldpagina.png)
+
+### Features
+
+Je kan op deze single page website zoeken in de rijksmuseum API. Je kan de schilderijen bekijken, zien hoe ze heten en zien wie het schilderij gemaakt heeft. Je kan ook zoeken naar een specifiek schilderij of schilder.
 
 ### Hoe installeer je dit project op je lokale machine?
 

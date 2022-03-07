@@ -22,3 +22,7 @@ export function errorState() {
 export function flyIn() {
     flySection.classList.add("vliegen");
 }
+/* ------------------------------------------------loading state verwijderen */
+export function hideLoading() {
+    htmlSection.classList.remove("skeleton");
+}

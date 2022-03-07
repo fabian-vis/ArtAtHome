@@ -5,7 +5,8 @@ import {
 import {
     errorState,
     header,
-    flyIn
+    flyIn,
+    hideLoading
 } from './states.js'
 
 import {
@@ -13,12 +14,6 @@ import {
 } from './searchError.js'
 
 import './search.js'
-
-
-/* ------------------------------------------------loading state verwijderen */
-function hideLoading() {
-    htmlSection.classList.remove("skeleton");
-}
 
 /* ------------------------------------------------Data uit de API halen */
 export function getData(url) {
