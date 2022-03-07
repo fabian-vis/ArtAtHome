@@ -16,6 +16,10 @@ Hier kan je de pagina bekijken [ArtAtHome](https://fabian-vis.github.io/ArtAtHom
 
 2. Cd naar de juiste project folder
 
+### Activity diagram
+
+![Activity diagram](img/activitydiagram.png)
+
 ### API Documentatie
 
 Ik heb gebruik gemaakt van de Rijksmuseum API. Deze API is gratis te gebruiken en bevat alle schilderijen die zich in het rijksmuseum bevinden. Hier vind je alle informatie over de API: [Rijksmuseum - RijksData API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/rijksmuseum.md)

@@ -1,7 +1,7 @@
 import {
     searchBar,
     artistsForError,
-    testSection
+    htmlSection
 } from './var.js'
 
 /* ------------------------------------------------search error function */
@@ -10,7 +10,7 @@ export function searchError(data) {
     if (data.artObjects.length === 0) {
         const artistName =
             artistsForError[Math.floor(Math.random() * artistsForError.length)];
-        testSection.insertAdjacentHTML(
+        htmlSection.insertAdjacentHTML(
             'afterbegin',
             "We found nothing with " + searchTerm +
             ", try a name like " + artistName + "."

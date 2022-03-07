@@ -1,5 +1,5 @@
 /* ------------------------------------------------alle variable handig op 1 plek */
-export const testSection = document.querySelector('main > section:nth-of-type(2)');
+export const htmlSection = document.querySelector('main > section:nth-of-type(2)');
 export const flySection = document.querySelector('main > section');
 export const headerSection = document.querySelector('header');
 export let url = 'https://www.rijksmuseum.nl/api/nl/collection?key=8op6V3T9&involvedMaker=Rembrandt+van+Rijn'

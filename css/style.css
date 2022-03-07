@@ -212,13 +212,14 @@ main > section:not(:last-child) {
 
 @keyframes headerOpacity {
   0% {
+    opacity: 1;
   }
 
   100% {
     opacity: 0.3;
   }
 }
-main > section:nth-of-type(2) > article p {
+main > section:nth-of-type(2) > article p:first-of-type {
     position: absolute;
     top: 1vh;
     left: 1vw;
@@ -228,6 +229,17 @@ main > section:nth-of-type(2) > article p {
     background-color: rgb(0,0,0, 0.7);
     color: white;
 }
+
+main > section:nth-of-type(2) > article p:last-of-type {
+  position: absolute;
+  bottom: 1vh;
+  left: 2vh;
+  padding: 0.2em;
+  font-family: Copperplate;
+  font-size: 1em;
+  background-color: rgb(0,0,0, 0.7);
+  color: white;
+}
 main > section:nth-of-type(2) > article img:hover {
     transform: scale(1.05);
     z-index: 1;
@@ -235,7 +247,7 @@ main > section:nth-of-type(2) > article img:hover {
 
 @media only screen and (max-width: 900px) {
 
-  main > section:nth-of-type(2) > article p {
+  main > section:nth-of-type(2) > article p:first-of-type {
     padding: 0.5em;
     font-size: 1em;
     left: 1vw;

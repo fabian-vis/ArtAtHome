@@ -1,5 +1,5 @@
 import {
-    testSection,
+    htmlSection,
     flySection,
     headerSection
 } from './var.js'
@@ -11,7 +11,7 @@ import {
 import './search.js'
 /* ------------------------------------------------loading state verwijderen */
 function hideLoading() {
-    testSection.classList.remove("skeleton");
+    htmlSection.classList.remove("skeleton");
 }
 /* ------------------------------------------------data in laten vliegen */
 function flyIn() {
@@ -21,19 +21,20 @@ function flyIn() {
 function header() {
     headerSection.classList.add("headerOpacity");
 }
+
 /* ------------------------------------------------Data uit de API halen */
 export function getData(url) {
     const data = fetch(url)
         .then(response => response.json())
         .then(data => {
-            testSection.innerHTML = ""
+            htmlSection.innerHTML = ""
             searchError(data)
             renderData(data)
         })
         /* ------------------------------------------------Gebruiker word op de hoogte gesteld van een error */
         .catch(err => {
             flyIn()
-            testSection.insertAdjacentHTML('afterbegin',
+            htmlSection.insertAdjacentHTML('afterbegin',
                 `
             <article>
                 <p>Oeps, er is iets fout gegaan.</p> 
@@ -49,10 +50,11 @@ function renderData(data) {
     header()
     console.log(data)
     data.artObjects.forEach(kunst => {
-        testSection.insertAdjacentHTML('afterbegin',
+        htmlSection.insertAdjacentHTML('afterbegin',
             `
             <article>
                 <p>${kunst.title}</p> 
+                <p>${kunst.principalOrFirstMaker}</p>
                 <img src="${kunst.webImage.url.slice(0, -3)+"=s1000"}">
             </article>
         `)
