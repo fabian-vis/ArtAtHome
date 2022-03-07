@@ -24,7 +24,7 @@ Hier kan je de pagina bekijken [ArtAtHome](https://fabian-vis.github.io/ArtAtHom
 
 Ik heb gebruik gemaakt van de Rijksmuseum API. Deze API is gratis te gebruiken en bevat alle schilderijen die zich in het rijksmuseum bevinden. Hier vind je alle informatie over de API: [Rijksmuseum - RijksData API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/rijksmuseum.md)
 
-## To do
+### To do
 
 | To do                        | Done? |
 | :--------------------------- | :---- |
@@ -35,6 +35,10 @@ Ik heb gebruik gemaakt van de Rijksmuseum API. Deze API is gratis te gebruiken e
 | Error state                  | ✅    |
 | Hash routing                 | ✅    |
 | Detail Page (?)              |       |
+
+### Rubrics
+
+![Beoordeling](img/rubrics.png)
 
 ### Licence
 
