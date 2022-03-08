@@ -23,11 +23,11 @@ Je kan op deze single page website zoeken in de rijksmuseum API. Je kan de schil
 
 3. Open index.html met een liveserver extension
 
-vergeet niet om je eigen API key aan te vragen bij de rijksmuseum API. Deze kan je dan ipv mijn key doen na ```key=``` bij de variable URl in het bestand var.js
+vergeet niet om je eigen API key aan te vragen bij de rijksmuseum API. Deze kan je dan ipv mijn key doen na `key=` bij de variable URl in het bestand var.js
 
 ### Activity diagram
 
-![Activity diagram](img/activitydiagram.png)
+![Activity diagram](img/activitydiagramv2.png)
 
 ### API Documentatie
 
@@ -55,7 +55,7 @@ Dit project is voorzien van een MIT licence.
 
 ### Resources
 
-Docenten en Student-Assistenten 
+Docenten en Student-Assistenten
 
 https://data.rijksmuseum.nl/object-metadata/api/
 
