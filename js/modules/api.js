@@ -32,7 +32,7 @@ export function getData(url, id) {
 }
 /* ------------------------------------------------Data word op de pagina gerenderd */
 const renderData = (data, id) => {
-    console.log(id)
+    // console.log(id)
     if (!id) {
         hideLoading()
         flyIn()
@@ -48,9 +48,9 @@ const renderData = (data, id) => {
                     </a>
                     </article>
             `)
-            console.log(kunst.id)
+            // console.log(kunst.id)
         })
     } else {
-        console.log("joe")
+        // console.log("joe")
     }
 }

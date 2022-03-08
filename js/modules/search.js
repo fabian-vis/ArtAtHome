@@ -11,7 +11,7 @@ import {
 /* ------------------------------------------------search function */
 export function search(searchBar) {
     let searchTerm = searchBar.value;
-    let url = "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=" + searchTerm + "&ps=5"
+    let url = "https://www.rijksmuseum.nl/api/nl/collection?key=8op6V3T9&q=" + searchTerm + "&ps=5"
     getData(url)
 }
 
@@ -26,7 +26,7 @@ searchBar.addEventListener("keyup", () => {
 /* ------------------------------------------------ Klik op het kruisje om het inputveld weer leeg te maken */
 searchIcon.addEventListener("click", () => {
     searchBar.value = "";
-    let url = "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=&ps=5";
+    let url = "https://www.rijksmuseum.nl/api/nl/collection?key=8op6V3T9";
     kruisje.classList.remove('kruisjeToggle')
     getData(url)
 })
