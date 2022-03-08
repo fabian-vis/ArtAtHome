@@ -31,7 +31,7 @@ export function getData(url, id) {
         })
 }
 /* ------------------------------------------------Data word op de pagina gerenderd */
-const renderData = (data, id) => {
+function renderData(data, id) {
     // console.log(id)
     if (!id) {
         hideLoading()
