@@ -104,6 +104,10 @@ main > section:not(:last-child) {
     visibility: hidden;
   }
 
+  .kruisjeToggle {
+    visibility: visible;
+  }
+
   main > section > input {
     border: 1px solid white;
     border-radius: 5px;
@@ -242,7 +246,7 @@ main > section:nth-of-type(2) > article p:last-of-type {
   color: white;
 }
 main > section:nth-of-type(2) > article img:hover {
-    transform: scale(1.05);
+    transform: scale(1.15);
     z-index: 1;
 }
 

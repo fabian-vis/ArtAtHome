@@ -6,7 +6,7 @@ import {
 
 /* ------------------------------------------------Header opacity veranderen */
 export function header() {
-    headerSection.classList.add("headerOpacity");
+    headerSection.classList.add("headerOpacity")
 }
 /* ------------------------------------------------Error handling */
 export function errorState() {
@@ -20,9 +20,9 @@ export function errorState() {
 }
 /* ------------------------------------------------data in laten vliegen */
 export function flyIn() {
-    flySection.classList.add("vliegen");
+    flySection.classList.add("vliegen")
 }
 /* ------------------------------------------------loading state verwijderen */
 export function hideLoading() {
-    htmlSection.classList.remove("skeleton");
+    htmlSection.classList.remove("skeleton")
 }

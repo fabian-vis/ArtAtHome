@@ -6,14 +6,14 @@ import {
 
 /* ------------------------------------------------search error function */
 export function searchError(data) {
-    let searchTerm = searchBar.value;
+    let searchTerm = searchBar.value
     if (data.artObjects.length === 0) {
         const artistName =
-            artistsForError[Math.floor(Math.random() * artistsForError.length)];
+            artistsForError[Math.floor(Math.random() * artistsForError.length)]
         htmlSection.insertAdjacentHTML(
             'afterbegin',
-            "We found nothing with " + searchTerm +
-            ", try a name like " + artistName + "."
-        );
+            "We hebben niks gevonden met " + searchTerm +
+            ", probeer iets met: " + artistName + "."
+        )
     }
 }

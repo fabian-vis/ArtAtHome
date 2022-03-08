@@ -16,13 +16,13 @@ import {
 import './search.js'
 
 /* ------------------------------------------------Data uit de API halen */
-export function getData(url) {
+export function getData(url, id) {
     const data = fetch(url)
         .then(response => response.json())
         .then(data => {
             htmlSection.innerHTML = ""
             searchError(data)
-            renderData(data)
+            renderData(data, id)
         })
         /* ------------------------------------------------Gebruiker word op de hoogte gesteld van een error */
         .catch(err => {
@@ -31,19 +31,26 @@ export function getData(url) {
         })
 }
 /* ------------------------------------------------Data word op de pagina gerenderd */
-function renderData(data) {
-    hideLoading()
-    flyIn()
-    header()
-    console.log(data)
-    data.artObjects.forEach(kunst => {
-        htmlSection.insertAdjacentHTML('afterbegin',
-            `
-            <article>
-                <p>${kunst.title}</p> 
-                <p>${kunst.principalOrFirstMaker}</p>
-                <img src="${kunst.webImage.url.slice(0, -3)+"=s1000"}">
-            </article>
-        `)
-    })
+const renderData = (data, id) => {
+    console.log(id)
+    if (!id) {
+        hideLoading()
+        flyIn()
+        header()
+        data.artObjects.forEach(kunst => {
+            htmlSection.insertAdjacentHTML('afterbegin',
+                `
+                    <article>
+                    <a href="#kunst/${kunst.id}">
+                            <p>${kunst.title}</p> 
+                            <p>${kunst.principalOrFirstMaker}</p>
+                            <img src="${kunst.webImage.url.slice(0, -3)+"=s1000"}">
+                    </a>
+                    </article>
+            `)
+            console.log(kunst.id)
+        })
+    } else {
+        console.log("joe")
+    }
 }

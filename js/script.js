@@ -7,14 +7,12 @@ import {
     getData
 } from './modules/api.js'
 
-// function showLoading() {
-//     htmlSection.classList.add("skeleton");
-// }
-
 routie({
-    '': () => {
-        console.log('werkt neef')
+    '': (id) => {
         /* ------------------------------------------------API data fetchen */
         getData(url)
-    }
-});
+    },
+    ':id': (id) => {
+        getData(id)
+    },
+})
