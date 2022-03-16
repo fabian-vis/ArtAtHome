@@ -13,10 +13,6 @@ Hier kan je mijn procesverslag bekijken [Procesverslag](https://github.com/fabia
 Hier kan je de pagina bekijken [ArtAtHome](https://fabian-vis.github.io/ArtAtHome/ "ArtAtHome")
 ![Voorbeeld Website](img/voorbeeldpagina.png)
 
-
-
-
-
 ### Features
 
 Je kan op deze single page website zoeken in de rijksmuseum API. Je kan de schilderijen bekijken, zien hoe ze heten en zien wie het schilderij gemaakt heeft. Je kan ook zoeken naar een specifiek schilderij of schilder.
@@ -33,7 +29,7 @@ vergeet niet om je eigen API key aan te vragen bij de rijksmuseum API. Deze kan 
 
 ### Activity diagram
 
-![Activity diagram](img/activitydiagramv2.png)
+![Activity diagram](img/activitydiagramv3.png)
 
 ### API Documentatie
 
