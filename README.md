@@ -8,8 +8,14 @@ Welkom bij mijn project van de minor Webdesign and development. Het doel van dit
 
 ### Resultaat
 
+Hier kan je mijn procesverslag bekijken [Procesverslag](https://github.com/fabian-vis/ArtAtHome/wiki "procesverslag")
+
 Hier kan je de pagina bekijken [ArtAtHome](https://fabian-vis.github.io/ArtAtHome/ "ArtAtHome")
 ![Voorbeeld Website](img/voorbeeldpagina.png)
+
+
+
+
 
 ### Features
 
