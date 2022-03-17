@@ -29,7 +29,7 @@ vergeet niet om je eigen API key aan te vragen bij de rijksmuseum API. Deze kan 
 
 ### Activity diagram
 
-![Activity diagram](img/activitydiagramv3.png)
+![Activity diagram](img/activitydiagramv4.png)
 
 ### API Documentatie
 
